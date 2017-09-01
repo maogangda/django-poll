@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投票首页</title>
+</head>
+<body>
+    {% for Que in Ques %}
+        <a href="{% url 'mypolls:show' Que.id %}">{{ Que.question_text }}</a>
+        <br><br>
+    {% endfor %}
+
+</body>
+</html>
